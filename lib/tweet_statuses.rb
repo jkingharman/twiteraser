@@ -21,26 +21,26 @@ class TweetStatuses
   private
 
   def read_tweets
-    p "Reading archived tweets.."
+    puts "Reading archived tweets.."
     File.read(PATH_TO_TWEETS)
   rescue Errno::ENOENT => e
-    p "Unable to read file: #{e}"
+    puts "Unable to read file: #{e}"
     exit
   end
 
   def validate_tweets(file)
     self.tweets = JSON.parse(file)
   rescue JSON::ParserError => e
-    p "Unable to parse tweets: #{e}"
+    puts "Unable to parse tweets: #{e}"
     exit
   end
 
   def tweets_to_delete
-    tweets.keys.reject { |k| k == "deleted" }
+    tweets.keys.reject { |k| k == "deleted" }.first(15).map(&:to_i)
   end
 
   def update_deleted_tweets(ids)
-    p "Recording tweets #{ids} as deleted"
+    puts "Recording tweets #{ids} as deleted"
     ids.each { |id| tweets[id] = "deleted" }
   end
 
