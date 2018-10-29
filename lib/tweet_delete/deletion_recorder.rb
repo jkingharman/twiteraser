@@ -5,7 +5,7 @@ module TweetDelete
   # find the next batch to delete.
   class DeletionRecorder
     PATH_TO_TWEETS = '../tweets.json'.freeze
-    BATCH_SIZE = 15
+    BATCH_SIZE = 50
     def initialize(file: File)
       @file = file
     end
