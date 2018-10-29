@@ -10,4 +10,4 @@ require_relative 'tweet_delete/delete_tweet_service'
 require_relative 'tweet_delete/deletion_recorder'
 require_relative 'tweet_delete/tweet_deleter'
 
-# TweetDelete::DeleteTweetService.new.call
+TweetDelete::DeleteTweetService.new.call
