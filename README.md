@@ -10,8 +10,8 @@ git clone https://github.com/jkingharman/twitteraser.git
 
 You'll then need to checkout this repo, ```bundle install```, and grab credentials from Twitter (look at ```TweetDeleter``` to see how you need your environment configured). Run tests with: ```rspec```.
 
-The program's expecting a JSON file at the project's root. That file should contain all archived tweets you wish
-to destroy. You'll need tweet IDs at the top-level of the JSON object, but the rest is up to you. Like so:
+The program's expecting a JSON file at the project root. That file should contain all archived tweets you wish
+to destroy. You'll need tweet IDs at the top-level of the JSON object but the rest is up to you. Like so:
 
 ```
 {
