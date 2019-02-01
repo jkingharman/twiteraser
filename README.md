@@ -24,8 +24,7 @@ to destroy. You'll need tweet IDs at the top-level of the JSON object but the re
 
 ## What it does ##
 
-Deletes you tweets in loads of 50. In lib, running ``` ruby tweet_delete ``` starts us off. Your archived tweets will be read and their IDs sent to Twitter for deletion. On success, the JSON gets updated (the deleted tweet is marked). If you
-need to restart already deleted tweets get ignored.
+Deletes you tweets in loads of 50. In lib, running ``` ruby tweet_delete ``` starts us off. Your archived tweets will be read and their IDs sent to Twitter for deletion. On success, the JSON gets updated (the deleted tweet is marked). If you need to restart already deleted tweets get ignored.
 
 ## Dependencies ##
 
