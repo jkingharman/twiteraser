@@ -1,17 +1,17 @@
 # Twitteraser #
 
 A little script that allows you to bulk wipe tweets from your timeline. It's a handy
-script for me but sadly now requires a Twitter Developer account.
+script for me but sadly now requires a [Twitter Developer](https://developer.twitter.com/en/dashboard) account.
 
 ## Why? ##
 
 There are third-party services that do the same thing but run into this
-constraint. Deleting archived tweets is a workaround.
+[constraint](https://web.archive.org/web/20131019125213/https://dev.twitter.com/discussions/276). Deleting archived tweets is a workaround.
 
 ## How do I setup? ##
 
 1. Get a Twitter Developer account.
-2. Create a Twitter app and set access permissions to read and write.
+2. Create a [Twitter app](https://developer.twitter.com/en/apps/create) and set access permissions to read and write.
 3. Find your keys, secret keys and access token. Make sure they're in your shell's environment. E.g.:
 
 ```
@@ -21,7 +21,7 @@ export TWITTER_ACCESS_TOKEN="[your access token]"
 export TWITTER_ACCESS_TOKEN_SECRET="[your access token secret]"
 ```
 
-4. Visit your Twitter account page and request your archive, later following the link in the email you receive.
+4. Visit your Twitter [account page](https://twitter.com/settings/account) and request your archive, later following the link in the email you receive.
 5. Download the archive, unpack and.
 
 ## How do I start? ##
