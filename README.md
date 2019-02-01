@@ -21,18 +21,16 @@ export TWITTER_ACCESS_TOKEN="[your access token]"
 export TWITTER_ACCESS_TOKEN_SECRET="[your access token secret]"
 ```
 
-You'll then need to checkout this repo, ```bundle install```, and grab credentials from Twitter (look at ```TweetDeleter``` to see how you need your environment configured). Run tests with: ```rspec```.
+4. Visit your Twitter account page and request your archive, later following the link in the email you receive.
+5. Download the archive, unpack and.
 
-The program's expecting a JSON file at the project root. That file should contain all archived tweets you wish to destroy. You'll need tweet IDs at the top-level of the JSON object but the rest is up to you. Like so:
+## How do I start? ##
 
-```
-{
-  "id": "any other tweet date here",
-  "id": "any other tweet date here",
-  "id": "any other tweet data here"
-}
+Checkout this repo, ```bundle install``` and then in lib run ``` ruby tweet_delete ```.
+You can test with ```rspec```. I like to limit deletion to 50 tweets at a time. But you can
+set your own limit by modifying ```BATCH_SIZE``` in ```DeletionRecorder```.
 
-```
+
 
 ## What it does ##
 
@@ -40,5 +38,5 @@ Deletes you tweets in loads of 50. In lib, running ``` ruby tweet_delete ``` sta
 
 ## Dependencies ##
 
-* twitter
-* dotenv
+* Twitter
+* Dotenv
