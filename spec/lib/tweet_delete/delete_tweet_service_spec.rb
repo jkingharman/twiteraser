@@ -7,6 +7,7 @@ describe TweetDelete::DeleteTweetService do
   let(:recorder) { double('Rec', to_delete: tweet_id, record_deletes: nil) }
 
   before do
+    ENV["TEST"] = "true"
     allow(subject).to receive(:tweet_deleter).and_return(deleter)
     allow(subject).to receive(:delete_recorder).and_return(recorder)
   end

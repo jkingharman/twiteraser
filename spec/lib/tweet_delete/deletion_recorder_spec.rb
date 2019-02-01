@@ -5,6 +5,7 @@ describe TweetDelete::DeletionRecorder do
   let(:tweets_archive) { {"1": "mock", "2": "dummy"} }
 
   before do
+    ENV["TEST"] = "true"
     File.write(tweets_path, tweets_archive.to_json)
     stub_const('TweetDelete::DeletionRecorder::BATCH_SIZE', 3)
     stub_const('TweetDelete::DeletionRecorder::PATH_TO_TWEETS', tweets_path)
