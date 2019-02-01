@@ -30,12 +30,6 @@ Checkout this repo, ```bundle install``` and then in lib run ``` ruby tweet_dele
 You can test with ```rspec```. I like to limit deletion to 50 tweets at a time. But you can
 set your own limit by modifying ```BATCH_SIZE``` in ```DeletionRecorder```.
 
-
-
-## What it does ##
-
-Deletes you tweets in loads of 50. In lib, running ``` ruby tweet_delete ``` starts us off. Your archived tweets will be read and their IDs sent to Twitter for deletion. On success, the JSON gets updated (the deleted tweet is marked). If you need to restart already deleted tweets get ignored.
-
 ## Dependencies ##
 
 * Twitter
