@@ -4,7 +4,7 @@ module TweetDelete
   # representation of tweets on deletion. It reads in that representation to
   # find the next batch to delete.
   class DeletionRecorder
-    PATH_TO_TWEETS = '../tweets.json'.freeze
+    PATH_TO_TWEETS = './tweets.json'.freeze
     BATCH_SIZE = 50
     def initialize(file: File)
       @file = file
@@ -45,8 +45,6 @@ module TweetDelete
     # Mungs tweets, marking them as deleted.
     def update_deleted_tweets(ids)
       puts "Recording tweets #{ids} as deleted"
-      puts ids.inspect
-      puts tweets.inspect
       tweets.each {|t| t["deleted"] = "true" if ids.include?(t["id_str"].to_i) }
     end
 
