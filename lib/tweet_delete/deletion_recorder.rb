@@ -13,7 +13,7 @@ module TweetDelete
     def to_delete
       file = read_tweets
       validate_tweets(file)
-      tweets_to_delete
+      puts tweets_to_delete
     end
 
     def record_deletes(ids)
@@ -38,13 +38,14 @@ module TweetDelete
 
     # Returns undeleted tweet IDs.
     def tweets_to_delete
-      tweets.keys.reject { |k| k =~ /deleted/ }.first(BATCH_SIZE).map(&:to_i)
+      to_delete = tweets.reject {|t| t.keys.include?("deleted") }
+      to_delete.map {|t| t["id_str"].to_i }.first(BATCH_SIZE)
     end
 
-    # Mungs tweet IDs, marking them as deleted.
+    # Mungs tweets, marking them as deleted.
     def update_deleted_tweets(ids)
       puts "Recording tweets #{ids} as deleted"
-      ids.each { |id| tweets["deleted_#{id}"] = tweets.delete id.to_s }
+      tweets.each {|t| t["deleted"] = "true" if ids.include?(t["id_str"]) }
     end
 
     def write_tweets
