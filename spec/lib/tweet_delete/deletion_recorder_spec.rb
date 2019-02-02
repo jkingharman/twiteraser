@@ -22,7 +22,7 @@ describe TweetDelete::DeletionRecorder do
         File.write(tweets_path, tweets_archive.to_json)
       end
       it 'does not return that tweet\'s ID' do
-        expect(subject.to_delete).to eq [743116669128736769]
+        expect(subject.to_delete).to_not eq [222]
       end
     end
   end
