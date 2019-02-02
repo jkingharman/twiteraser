@@ -1,7 +1,6 @@
 # Twitteraser #
 
-A little script that allows you to bulk wipe tweets from your timeline. It's a handy
-script for me but sadly now requires a [Twitter Developer](https://developer.twitter.com/en/dashboard) account.
+A little script that bulk wipes tweets from your timeline. It's handy for me but sadly now requires a [Twitter Developer](https://developer.twitter.com/en/dashboard) account.
 
 ## How do I setup? ##
 
@@ -17,17 +16,17 @@ export TWITTER_ACCESS_TOKEN_SECRET="[your access token secret]"
 ```
 
 4. Visit your Twitter [account page](https://twitter.com/settings/account) and request your archive, later following the link in the email you receive.
-5. Download the archive and locate whatever tweets you want to delete by year and month, as show here:
+5. Download the archive and locate the tweets you want to delete by year and month, as show here:
 
 ![alt text](https://user-images.githubusercontent.com/24657744/52168420-2f73cb80-2722-11e9-8e60-baf1b4b12953.png)
 
-6. Checkout this repo and move the located tweets into its root, stripping the first line of the tweet file. (As the archive email says, this is necessary to consume that file as JSON.)
+6. Checkout this repo and move those tweets to its root, stripping that file's first line. Stripping is necessary to consume that file as JSON, as the email above points out.
 
 ## How do I start? ##
 
-You first ```bundle install``` and then in lib run ``` ruby tweet_delete ```.
-You can test with ```rspec```. I like to limit deletion to 50 tweets at a time. But you can
-set your own limit by modifying ```BATCH_SIZE``` in ```DeletionRecorder```.
+First ```bundle install``` and then in lib run ``` ruby tweet_delete ```. I like to limit deletion to 50 tweets at a time, but you can set your own limit by modifying ```BATCH_SIZE``` in ```DeletionRecorder```.
+
+You can test with ```rspec``` if you want.
 
 ## Dependencies ##
 
