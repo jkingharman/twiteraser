@@ -19,7 +19,7 @@ export TWITTER_ACCESS_TOKEN_SECRET="[your access token secret]"
 4. Visit your Twitter [account page](https://twitter.com/settings/account) and request your archive, later following the link in the email you receive.
 5. Download the archive and locate whatever tweets you want to delete by year and month, as show here:
 
-![alt text](https://user-images.githubusercontent.com/24657744/52166066-8b2d5d00-2700-11e9-8183-3f5c060702d7.png)
+![alt text](https://user-images.githubusercontent.com/24657744/52168420-2f73cb80-2722-11e9-8e60-baf1b4b12953.png)
 
 6. Checkout this repo and move the located tweets into its root, stripping the first line of the tweet file. (As the archive email says, this is necessary to consume that file as JSON.)
 
