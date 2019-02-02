@@ -4,7 +4,7 @@ module TweetDelete
   # representation of tweets on deletion. It reads in that representation to
   # find the next batch to delete.
   class DeletionRecorder
-    PATH_TO_TWEETS = '../tweets.json'.freeze
+    PATH_TO_TWEETS = '../tweets.js'.freeze
     BATCH_SIZE = 50
     def initialize(file: File)
       @file = file

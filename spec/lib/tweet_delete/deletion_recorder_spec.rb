@@ -1,7 +1,7 @@
 require_relative '../../spec_helper.rb'
 
 describe TweetDelete::DeletionRecorder do
-  let(:tweets_path) { './spec/support/tweets.json' }
+  let(:tweets_path) { './spec/support/tweets.js' }
   let(:tweets_archive) { [{"id_str":"743116669128736769"},{"deleted":"true","id_str":"222"}] }
 
   before do
